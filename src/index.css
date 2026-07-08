@@ -1,0 +1,78 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme {
+  --color-primary-50: #eff6ff;
+  --color-primary-100: #dbeafe;
+  --color-primary-500: #3b82f6;
+  --color-primary-900: #1e3a8a;
+  
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+@layer base {
+  :root {
+    --bg-color: #f8fafc;
+    --text-color: #0f172a;
+  }
+
+  :root.dark {
+    --bg-color: #0b0f19;
+    --text-color: #f8fafc;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply antialiased min-h-screen overflow-x-hidden transition-colors duration-300;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+  }
+}
+
+@layer utilities {
+  .ambient-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    /* GPU-accelerate the fixed background layer */
+    will-change: transform;
+    transform: translateZ(0);
+    background: 
+      radial-gradient(circle at 15% 50%, rgba(96, 165, 250, 0.15), transparent 40%),
+      radial-gradient(circle at 85% 30%, rgba(167, 139, 250, 0.15), transparent 40%),
+      radial-gradient(circle at 50% 100%, rgba(52, 211, 153, 0.1), transparent 50%);
+  }
+
+  .dark .ambient-bg {
+    background: 
+      radial-gradient(circle at 15% 50%, rgba(59, 130, 246, 0.08), transparent 40%),
+      radial-gradient(circle at 85% 30%, rgba(139, 92, 246, 0.08), transparent 40%),
+      radial-gradient(circle at 50% 100%, rgba(16, 185, 129, 0.05), transparent 50%);
+  }
+
+  .glass-panel {
+    @apply bg-white/40 dark:bg-slate-900/50 backdrop-blur-xl border border-white/60 dark:border-white/10 shadow-[0_8px_32px_0_rgba(31,38,135,0.05)] dark:shadow-none rounded-2xl relative overflow-hidden;
+  }
+  
+  .glass-panel::before {
+    content: '';
+    @apply absolute inset-0 bg-gradient-to-br from-white/40 to-white/0 dark:from-white/5 dark:to-transparent pointer-events-none transition-colors duration-300;
+  }
+  
+  .glass-panel-hover {
+    @apply transition-all duration-500 hover:bg-white/60 dark:hover:bg-slate-800/50 hover:shadow-[0_16px_40px_0_rgba(31,38,135,0.08)] dark:hover:shadow-none hover:-translate-y-1;
+  }
+
+  /* GPU-acceleration utility for parallax/motion elements */
+  .gpu-accelerate {
+    will-change: transform;
+    transform: translateZ(0);
+  }
+}
