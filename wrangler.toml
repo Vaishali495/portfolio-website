@@ -1,0 +1,3 @@
+name = "portfolio-website"
+main = "src/index.main.tsx"   # change this to your entry file
+compatibility_date = "2026-07-08"
