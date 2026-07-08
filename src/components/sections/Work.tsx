@@ -1,5 +1,5 @@
-import { motion } from 'framer-motion';
-import { ExternalLink, Server, Database, Sparkles } from 'lucide-react';
+import { motion, type Variants } from 'framer-motion';
+import { ExternalLink, Server, Sparkles } from 'lucide-react';
 
 const projects = [
   {
@@ -23,7 +23,7 @@ const containerVariants = {
   visible: { transition: { staggerChildren: 0.15 } },
 };
 
-const cardVariants = {
+const cardVariants: Variants = {
   hidden: { opacity: 0, y: 40 },
   visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
 };
