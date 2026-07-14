@@ -36,7 +36,7 @@ const skillCategories = [
     icon: TerminalSquare,
     color: 'text-purple-600',
     bg: 'bg-purple-100 dark:bg-purple-900/40',
-    skills: ['JavaScript', 'TypeScript', 'SQL', 'C++', 'C']
+    skills: ['JavaScript', 'TypeScript', 'C++', 'C']
   }
 ];
 
