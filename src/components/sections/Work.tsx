@@ -9,7 +9,20 @@ const projects = [
     description:
       "Built the backend of a complaint management system using Express.js and MongoDB, handling ticket creation, assignment, and status updates. Designed REST APIs to connect tenants, administrators, and technicians on a single platform, making communication and issue tracking much smoother. Structured the database schema to efficiently manage complaint history, user roles, and permissions. Added validation and error handling to keep the system reliable and prevent incorrect or duplicate ticket entries.",
     tags: ["Node.js", "Express.js", "MongoDB", "REST APIs", "JWT"],
-    liveUrl: "#", // Placeholder — update when live
+    liveUrl: "https://tower-backend-2.onrender.com/api-docs/", // Placeholder — update when live
+    icon: Server,
+    accent: "from-blue-500 to-indigo-600",
+    accentBg: "bg-blue-50 dark:bg-blue-900/30",
+    accentText: "text-blue-600 dark:text-blue-400",
+    borderAccent: "border-t-blue-500/70",
+  },
+  {
+    id: 2,
+    title: "Iserv Admin",
+    subtitle: "Event Volunteer Management System",
+    description: "Developed a full-stack admin portal using React.js, TypeScript, Node.js, Express.js, and MongoDB to manage NPOs, students, teachers, events, and user access. Built and integrated RESTful APIs with MongoDB to support volunteer management, enabling NPOs to create events and students to register as volunteers.",
+    tags: ["React.js","TypeScript","Node.js", "Express.js", "MongoDB", "REST APIs"],
+    liveUrl: "https://iserv-admin.onrender.com", // Placeholder — update when live
     icon: Server,
     accent: "from-blue-500 to-indigo-600",
     accentBg: "bg-blue-50 dark:bg-blue-900/30",
