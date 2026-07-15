@@ -30,7 +30,7 @@ export function About() {
               { value: "1+", label: "Years Learning & Building" },
               { value: "10+", label: "Projects Completed" },
               { value: "100+", label: "DSA Problems Solved" },
-              { value: "5+", label: "Technologies Mastered" }
+              { value: "5+", label: "Technologies Used" }
             ].map((stat, idx) => (
               <div key={idx} className="p-4 md:p-5 rounded-2xl bg-white/50 dark:bg-slate-900/50 border border-white/50 dark:border-slate-700/50 shadow-sm backdrop-blur-md flex flex-col items-center justify-center text-center transition-all hover:-translate-y-1 duration-300 hover:shadow-md dark:hover:bg-slate-800/60">
                 <span className="text-2xl md:text-3xl font-extrabold bg-gradient-to-br from-blue-500 to-indigo-600 dark:from-blue-400 dark:to-indigo-500 bg-clip-text text-transparent mb-1 md:mb-2">
